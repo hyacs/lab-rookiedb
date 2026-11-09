@@ -3,6 +3,7 @@ package edu.berkeley.cs186.database.query;
 import edu.berkeley.cs186.database.Database;
 import edu.berkeley.cs186.database.TimeoutScaling;
 import edu.berkeley.cs186.database.Transaction;
+import edu.berkeley.cs186.database.categories.Proj99Tests;
 import edu.berkeley.cs186.database.common.Pair;
 import edu.berkeley.cs186.database.concurrency.DummyLockContext;
 import edu.berkeley.cs186.database.databox.Type;
@@ -16,6 +17,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.rules.DisableOnDebug;
 import org.junit.rules.TemporaryFolder;
 import org.junit.rules.TestRule;
@@ -33,6 +35,7 @@ import static org.junit.Assert.assertTrue;
  * the tests in TestNestedLoopJoins with excessively detailed output when something
  * messes up.
  */
+@Category({Proj99Tests.class})
 public class ExtraNLJTests {
     // All of these tests use 4 records per page. This record size forces the
     // tables to have 4 records per page. See the calculation in
